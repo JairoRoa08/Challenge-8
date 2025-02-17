@@ -74,3 +74,11 @@ function calculateLoanPayment (principle, rate, time) {
 }
 calculateLoanPayment(1000, 0.05, 2);
 calculateLoanPayment(5000, 0.07, 3);
+
+// Task 6: Higher-Order Functions
+let transaction = [200, 500, 3000, 800, 2000, 1000, 500]
+function filterLargeTransactions(transactions, filterFunction) {
+    return transactions.filter(filterFunction);
+}
+let largeTransactions = filterLargeTransactions(transactions, amount => amount > 1000);
+console.log(largeTransactions);
