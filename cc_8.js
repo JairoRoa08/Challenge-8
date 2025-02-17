@@ -15,3 +15,28 @@ const calculateDiscount = function(price, discountRate) {
 
 calculateDiscount(100, 0.2);
 calculateDiscount(250, 0.15);
+
+// Task 3: Arrow Function
+const calculateServiceFee = (amount, serviceType) => {
+    let feeRate;
+    switch(serviceType) {
+        case "Premium":
+            feeRate = 0.15;
+            break;
+        case "Standard":
+            feeRate = 0.10;
+            break;
+        case "Basic":
+            feeRate = 0.05;
+            break;
+        default:
+            console.log("Invalid service type");
+            return; 
+}
+const serviceFee = amount * feeRate;
+
+console.log(`Service Fee: $${serviceFee.toFixed(2)}`);
+}
+
+calculateServiceFee(200, "Premium");
+calculateServiceFee(500, "Standard");
