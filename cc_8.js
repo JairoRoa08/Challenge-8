@@ -66,3 +66,11 @@ console.log(`Total Rental Cost: $${totalCost}`);
 }
 calculateRentalCost(3, "Economy", true);
 calculateRentalCost(5, "Luxury", false);
+
+// Task 5: Returning Values
+function calculateLoanPayment (principle, rate, time) {
+    const totalPayment = principle + (principle * rate * time);
+    console.log('Total Payment: $${totalPayment.toFixed(2)');
+}
+calculateLoanPayment(1000, 0.05, 2);
+calculateLoanPayment(5000, 0.07, 3);
