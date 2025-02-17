@@ -34,10 +34,8 @@ const calculateServiceFee = (amount, serviceType) => {
             return; 
 }
 const serviceFee = amount * feeRate;
-
 console.log(`Service Fee: $${serviceFee.toFixed(2)}`);
 }
-
 calculateServiceFee(200, "Premium");
 calculateServiceFee(500, "Standard");
 
@@ -93,5 +91,15 @@ function createCartTracker() {
 }
 let cart = createCartTracker();
 console.log(cart(20));
-console.log(cart(35));
+console.log(cart(35))[]
 
+// Task 8: Recursive in Javascript
+function calculateSavings(years, amount) {
+    if (years <= 0) {
+        return amount;
+}
+const newAmount = amount * 1.05;
+return calculateSavings(years - 1, newAmount);
+}
+console.log(`Projected Savings: $${calculateSavings(8, 1000).toFixed(2)}`);
+console.log(`Projected Savings: $${calculateSavings(5, 5000).toFixed(2)}`);
